@@ -1,12 +1,30 @@
-.nav {
-  ul {
-  	margin: 0 0 0 0;
-  	padding: 0 0 0 0;
-    list-style: none;
-    li {
-      a {
-      	text-decoration: none;
+.nav-section{
+  background-color: #75C398;
+  width: 220px;
+  height: 100vh;
+  .main-nav {
+    ul {
+    	margin: 0 0 0 0;
+    	padding: 200px 0 0 0;
+      list-style: none;
+      li {
+        margin: 3px 0px 3px 30px;
+        a {
+          font-family: Raleway medium;
+          font-size: 18px;
+          text-transform: uppercase;
+          color: #ffffff;
+        	text-decoration: none;
+        }
       }
     }
+  }
+
+  .register-project{
+    background-color: #f56462;
+    color: #ffffff;
+    height: 30px;
+    width: 180px;
+    margin:250px 0 0 20px
   }
 }
