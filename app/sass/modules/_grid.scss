@@ -11,10 +11,11 @@
     flex-wrap: wrap;
     margin: 0 -15px;
     position: relative;
+    width: 100vw;
   }
 
   &__column {
-    align-items: center;
+    // align-items: center;
     color: $white;
     display: flex;
     flex: 0 0 auto;
@@ -24,6 +25,25 @@
                       - Nigel
                     */
     position: relative;
+    @media screen and (max-width: 648px) {
+      height: 25vh;
+    }
+
+    .globe{
+      max-width: 140px;
+      text-align: center;
+
+      @media screen and (max-width: 648px){
+        max-width: 50px;
+      }
+      }
+
+      .globe2{
+        margin: 25% 40%;
+        @media screen and (max-width: 648px){
+          margin: 3% 40% 0 40%;
+        }
+      }
 
     &--background {
       //background: url("/assets/img/coding-background.jpg") cover no-repeat inherit;
@@ -48,24 +68,27 @@
       max-width: 25vw;
 
       @media screen and (max-width: 648px) {
-        flex-basis: 50vw;
-        max-width: 50vw;
+        flex-basis: 33.33vw;
+        max-width: 33.33vw;
       }
     }
 
     &--large {
       height: 33vh;
-
-      @media screen and (max-width: 648px) {
-        height: 66vw;
-      }
     }
 
     &--small {
       height: 25vh;
 
       @media screen and (max-width: 648px) {
-        height: 50vh;
+        max-width: 50vw;
+      }
+    }
+
+    &--third{
+      @media screen and (max-width: 648px) {
+        flex-basis: 33.33vw;
+        max-width: 33.33vw;
       }
     }
 
