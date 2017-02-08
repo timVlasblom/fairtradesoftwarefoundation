@@ -1,6 +1,7 @@
 .sass-cache
 build
 .idea
+*.css.map
 
 # Packages #
 ############
