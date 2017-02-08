@@ -1,3 +1,20 @@
-.content {
-  padding: 2rem;
+.heading{
+  //width: 100%;
+  //text-align: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border-bottom: #ffffff 2px solid;
+  }
+
+  &--qoute {
+    //border-bottom: none;
+    font-weight: bold;
+    font-style: italic;
+  }
 }

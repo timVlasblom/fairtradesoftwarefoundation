@@ -1,69 +1,65 @@
-.full {
-  width: 100%;
-  @extend %clear;
-  padding: 0;
-  margin-bottom: 2rem;
-  @include transition(ease-in-out, .5s);
-}
-.col {
-  float: left;
-  padding: 1.5rem 1.2rem 1.5rem 1.5rem;
-  text-align: left;
-  overflow: hidden;
-  @include transition(ease-in-out right, .5s);
-  &:last-child {
-    border-right: 0;
+.grid {
+  &__container {
+    flex: 0 0 100vw;
+    position: relative;
+    padding: 0 15px;
+    height: 100vh;
+    max-width: 100vw;
   }
-  &.col_full {
-    width: 100%;
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    position: relative;
   }
-  &.col_half {
-    width: 50%;
-    @media screen and (max-width: 770px) {
-      width: 100%;
+
+  &__column {
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    display: flex;
+    flex: 0 0 auto;
+    height: 50vh;
+    max-width: 100%;
+    padding: 0 15px; /* niet afvragen, gewoon doen
+                      - Nigel
+                    */
+    position: relative;
+
+    &--background {
+      //background: url("/assets/img/coding-background.jpg") cover no-repeat inherit;
+      background-image: url("/assets/img/coding-background.jpg");
+      background-repeat:no-repeat;
+      background-size: cover;
+      background-position:center;
     }
-  }
-  &.col_third {
-    width: 33.33%;
-    @media screen and (max-width: 770px) {
-      width: 100%;
-    }
-  }
-  &.col_quarter {
-    width: 25%;
-    @media screen and (max-width: 770px) {
-      width: 100%;
-    }
-  }
-  &.col_fifth {
-    width: 20%;
-    @media screen and (max-width: 770px) {
-      width: 100%;
-    }
-  }
-  &.col_sixth {
-    width: 16.66%;
-    @media screen and (max-width: 770px) {
-      width: 100%;
-    }
-  }
-  .columns {
-    &.columns_2 {
-      columns: 2;
-      @media screen and (max-width: 450px) {
-        columns: 1;
+
+    &--half {
+      flex-basis: 50vw;
+      max-width: 50vw;
+      
+      @media width {
+        
       }
     }
 
-    &.columns_3 {
-      columns: 3;
-      @media screen and (max-width: 660px) {
-        columns: 2;
-      }
-      @media screen and (max-width: 450px) {
-        columns: 1;
-      }
+    &--quarter {
+      flex-basis: 25vw;
+      max-width: 25vw;
     }
+
+    &--large {
+      height: 33vh;
+    }
+
+    &--small {
+      height: 25vh;
+    }
+
+    &--green { background-color: $de-york; }
+
+    &--red { background-color: $carnation; }
+
+    &--blue { background-color: $robin-egg-blue; }
   }
 }
-
