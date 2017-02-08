@@ -566,8 +566,8 @@ h6 {
 
 .nav-section {
   background-color: #75C398;
-  width: 220px;
-  height: 100vh; }
+  width: 100px;
+  height: 100px; }
   .nav-section .main-nav ul {
     margin: 0 0 0 0;
     padding: 200px 0 0 0;
@@ -587,6 +587,19 @@ h6 {
     width: 180px;
     margin: 250px 0 0 20px; }
 
+.nav-section:hover {
+  animation-name: display;
+  animation-duration: 2s; }
+
+@keyframes display {
+  from {
+    height: 100px; }
+  to {
+    height: 100vh; }
+  from {
+    width: 100px; }
+  to {
+    width: 220px; } }
 .sidebar {
   width: 0;
   height: 100%;
