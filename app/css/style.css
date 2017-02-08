@@ -391,7 +391,6 @@ body {
   position: relative; }
 .grid__column {
   align-items: center;
-  justify-content: center;
   color: #fff;
   display: flex;
   flex: 0 0 auto;
@@ -439,7 +438,8 @@ main {
   width: 100vw; }
 
 .heading {
-  position: relative; }
+  position: relative;
+  margin: 0 auto; }
   .heading::after {
     content: '';
     position: absolute;

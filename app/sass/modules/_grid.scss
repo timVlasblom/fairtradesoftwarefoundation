@@ -15,7 +15,6 @@
 
   &__column {
     align-items: center;
-    justify-content: center;
     color: #fff;
     display: flex;
     flex: 0 0 auto;
@@ -37,9 +36,9 @@
     &--half {
       flex-basis: 50vw;
       max-width: 50vw;
-      
+
       @media width {
-        
+
       }
     }
 
