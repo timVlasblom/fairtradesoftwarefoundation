@@ -357,6 +357,9 @@ td,
 th {
   padding: 0; }
 
+/*
+ * Colours
+ */
 /* green */
 /* blue */
 /* red */
@@ -377,6 +380,10 @@ body {
   margin: 0;
   width: 100vw;
   overflow-y: hidden; }
+  @media screen and (max-width: 648px) {
+    body {
+      overflow-x: hidden;
+      overflow-y: scroll; } }
 
 .grid__container {
   flex: 0 0 100vw;
@@ -391,7 +398,7 @@ body {
   position: relative; }
 .grid__column {
   align-items: center;
-  color: #fff;
+  color: #FFFFFF;
   display: flex;
   flex: 0 0 auto;
   height: 50vh;
@@ -409,13 +416,27 @@ body {
   .grid__column--half {
     flex-basis: 50vw;
     max-width: 50vw; }
+    @media screen and (max-width: 648px) {
+      .grid__column--half {
+        flex-basis: 100vw;
+        max-width: 100vw; } }
   .grid__column--quarter {
     flex-basis: 25vw;
     max-width: 25vw; }
+    @media screen and (max-width: 648px) {
+      .grid__column--quarter {
+        flex-basis: 50vw;
+        max-width: 50vw; } }
   .grid__column--large {
     height: 33vh; }
+    @media screen and (max-width: 648px) {
+      .grid__column--large {
+        height: 66vw; } }
   .grid__column--small {
     height: 25vh; }
+    @media screen and (max-width: 648px) {
+      .grid__column--small {
+        height: 50vh; } }
   .grid__column--green {
     background-color: #75C398; }
   .grid__column--red {
@@ -436,6 +457,9 @@ main {
   display: flex;
   height: 100vh;
   width: 100vw; }
+  @media screen and (max-width: 648px) {
+    main {
+      flex-direction: column; } }
 
 .heading {
   position: relative;
