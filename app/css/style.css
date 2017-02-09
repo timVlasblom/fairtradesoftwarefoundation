@@ -451,4 +451,24 @@ main {
     font-weight: bold;
     font-style: italic; }
 
+.footer{
+	width:auto;
+	height:70px;
+	background-color:#75C398;
+	margin:auto;
+}
+a{
+	width:5%;
+	float: right;
+	margin: 5px;
+	padding: 0 1% 1% 1%;
+}
+
+.logo{
+	width: 80px;
+	float: left;
+	padding: 0 10% 1% 10%;
+}
+
+
 /*# sourceMappingURL=style.css.map */
