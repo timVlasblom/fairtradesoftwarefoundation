@@ -1,20 +1,19 @@
 .heading{
-  //width: 100%;
-  //text-align: center;
   position: relative;
   margin: auto;
+  cursor: pointer;
+  text-align: center;
 
   &::after {
     content: '';
     position: absolute;
-    left: -15px;
-    right: -15px;
+    left: 0;
+    right: 0;
     bottom: -15px;
-    border-bottom: #ffffff 2px solid;
+    border-bottom: $white 2px solid;
   }
 
   &--qoute {
-    //border-bottom: none;
     font-weight: bold;
     font-style: italic;
   }

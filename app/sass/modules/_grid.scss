@@ -5,6 +5,29 @@
     padding: 0 15px;
     height: 100vh;
     max-width: 100vw;
+
+
+    &--intro {
+      background-image: url("/assets/img/banner.png");
+      background-repeat:no-repeat;
+      background-size: cover;
+      background-position: top;
+    }
+
+    &--large {
+      flex: 0 0 75vw;
+      max-width: 75vw;
+    }
+
+    &--half {
+      flex: 0 0 50vw;
+      max-width: 50vw;
+
+      @media screen and (max-width: 648px) {
+        flex: 0 0 100vw;
+        max-width: 100vw;
+      }
+    }
   }
   &__row {
     display: flex;
@@ -12,19 +35,34 @@
     margin: 0 -15px;
     position: relative;
     width: 100vw;
+
+    &--column {
+      flex-direction: column;
+    }
+
+    &--large {
+      width: 75vw;
+    }
+
+    &--half {
+      width: 50vw;
+
+      @media screen and (max-width: 648px) {
+        width: 100vw;
+      }
+    }
   }
 
   &__column {
-    // align-items: center;
+    align-items: center;
     color: $white;
     display: flex;
     flex: 0 0 auto;
     height: 50vh;
     max-width: 100%;
-    padding: 0 15px; /* niet afvragen, gewoon doen
-                      - Nigel
-                    */
+    padding: 0 15px;
     position: relative;
+
     @media screen and (max-width: 648px) {
       height: 25vh;
     }
@@ -53,6 +91,22 @@
       background-position:center;
     }
 
+
+
+    &--terms {
+      background-image: url("/assets/img/man-coffee-cup-pen.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &--downloads {
+      background-image: url("/assets/img/coffee-and-laptop.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
     &--half {
       flex-basis: 50vw;
       max-width: 50vw;
@@ -74,7 +128,16 @@
     }
 
     &--large {
-      height: 33vh;
+      height: 66.66vh;
+
+      @media screen and (max-width: 648px) {
+        flex-basis: 100vw;
+        max-width: 100vw;
+      }
+    }
+
+    &--medium {
+      height: 33.33vh;
     }
 
     &--small {
@@ -86,6 +149,9 @@
     }
 
     &--third{
+      flex-basis: 33.33vw;
+      max-width: 33.33vw;
+
       @media screen and (max-width: 648px) {
         flex-basis: 33.33vw;
         max-width: 33.33vw;
