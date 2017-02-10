@@ -51,20 +51,43 @@
 #slide:checked + .nav-container .sidemenu {
   left: 0px;
   animation-name: sidemenu;
-  animation-duration: 2s
+  animation-duration: 2s;
+
+  .register-project {
+   animation-name: register-project;
+   animation-duration: 2s;
+  }
+
+  .sidemenu-list {
+   animation-name: sidemenutext;
+   animation-duration: 2s;
  }
+}
 
 #slide:checked + .nav-container .toggle {
   left: 20px;
   background-color: $de-york;
  }
+
 #slide {
   display: none;
 }
 
 @keyframes sidemenu {
-    from {width: 10px;}
-    to {width: 220px;}
-    from {height: 10px;}
-    to {height: 100vh;}
+  from {width: 10px;}
+  to {width: 220px;}
+  from {height: 10px;}
+  to {height: 100vh;}
+}
+
+@keyframes register-project {
+  from {width: 10px;}
+  to {width: 180px;}
+  from {font-size: 1px;}
+  to {font-size: 20px;}
+}
+
+@keyframes sidemenutext {
+  from {font-size: 1px;}
+  to {font-size: 20px;}
 }

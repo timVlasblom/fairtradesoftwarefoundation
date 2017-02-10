@@ -617,6 +617,12 @@ h6 {
   left: 0px;
   animation-name: sidemenu;
   animation-duration: 2s; }
+  #slide:checked + .nav-container .sidemenu .register-project {
+    animation-name: register-project;
+    animation-duration: 2s; }
+  #slide:checked + .nav-container .sidemenu .sidemenu-list {
+    animation-name: sidemenutext;
+    animation-duration: 2s; }
 
 #slide:checked + .nav-container .toggle {
   left: 20px;
@@ -634,6 +640,20 @@ h6 {
     height: 10px; }
   to {
     height: 100vh; } }
+@keyframes register-project {
+  from {
+    width: 10px; }
+  to {
+    width: 180px; }
+  from {
+    font-size: 1px; }
+  to {
+    font-size: 20px; } }
+@keyframes sidemenutext {
+  from {
+    font-size: 1px; }
+  to {
+    font-size: 20px; } }
 .sidebar {
   width: 0;
   height: 100%;
