@@ -38,7 +38,7 @@ module.exports = function(grunt) {
     clean: {
       build: {
         src: [ 'build' ]
-      },
+      }
     },
 
     sass: {
@@ -61,21 +61,6 @@ module.exports = function(grunt) {
       }
     },
 
-    jshint: {
-      files: ['app/js/**/*.js'],
-      options: { 
-        jshintrc: '.jshintrc',
-        globals: {  
-           
-        },
-        ignores : []
-      }
-    },
-
-    nodeunit: {
-      files: ['test/**/*_test.js']
-    },
-
     htmlhint: {
       build: {
         options: {
@@ -93,18 +78,6 @@ module.exports = function(grunt) {
       }
     },
 
-    uglify: {
-      build: {
-        files: {
-            'build/js/base.min.js': ['app/js/**/*.js']
-        }
-      }
-    },
-
-    lint: {
-      all:['app/js/**/*.js']
-    },
-
     connect: {
       server: {
         options: {
@@ -119,14 +92,6 @@ module.exports = function(grunt) {
       html: {
         files: ['app/index.html', 'app/views/*.html'],
         tasks: ['copy:htmldir'],
-        options: {
-          livereload: true
-        }
-      },
-
-      js: {
-        files: ['app/js/**/*.js'],
-        tasks: ['js'],
         options: {
           livereload: true
         }
@@ -150,10 +115,7 @@ module.exports = function(grunt) {
     }
   });
 
-  // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  // Load the plugins
   grunt.loadNpmTasks('grunt-htmlhint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
@@ -163,9 +125,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Default task(s).
-  grunt.registerTask('default', ['build', 'css', 'js', 'html', 'connect:server', 'watch']);
+  grunt.registerTask('default', ['build', 'css', 'html', 'connect:server', 'watch']);
   grunt.registerTask('build', ['clean', 'copy:main']);
-  grunt.registerTask('js', ['jshint', 'uglify']);
   grunt.registerTask('css', ['sass', 'cssmin']);
   grunt.registerTask('html', ['htmlhint']);
 };
