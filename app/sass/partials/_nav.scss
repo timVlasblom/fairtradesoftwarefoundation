@@ -1,0 +1,94 @@
+
+.nav-container{
+  height: 100vh;
+  width: 220px;
+}
+.toggle {
+  text-decoration: none;
+  font-size: 2em;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.sidemenu {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: -220px;
+  width: 220px;
+  height: 100vh;
+  background-color: $de-york;
+}
+
+.sidemenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: 80% 0 60% 10%;
+}
+
+.sidemenu li a {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 0.5%;
+  text-decoration: none;
+  line-height: 200%;
+}
+
+.sidemenu a:hover {
+  color: rgba(0, 0, 0, 0.61);
+}
+
+.register-project{
+  width: 180px;
+  padding: 10px 0;
+  margin: 0 20px;
+  background-color: $carnation;
+  color: $white;
+}
+
+#slide:checked + .nav-container .sidemenu {
+  left: 0px;
+  animation-name: sidemenu;
+  animation-duration: 2s;
+
+  .register-project {
+   animation-name: register-project;
+   animation-duration: 2s;
+  }
+
+  .sidemenu-list {
+   animation-name: sidemenutext;
+   animation-duration: 2s;
+ }
+}
+
+#slide:checked + .nav-container .toggle {
+  left: 20px;
+  background-color: $de-york;
+ }
+
+#slide {
+  display: none;
+}
+
+@keyframes sidemenu {
+  from {width: 10px;}
+  to {width: 220px;}
+  from {height: 10px;}
+  to {height: 100vh;}
+}
+
+@keyframes register-project {
+  from {width: 10px;}
+  to {width: 180px;}
+  from {font-size: 1px;}
+  to {font-size: 20px;}
+}
+
+@keyframes sidemenutext {
+  from {font-size: 1px;}
+  to {font-size: 20px;}
+}
